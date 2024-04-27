@@ -1,0 +1,38 @@
+.header {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .left {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.header .right {
+    display: flex;
+    align-items: flex-start;
+}
+
+.header .left .logo {
+    width: 100px;
+}
+
+.header .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.header .navbar ul li {
+    padding-right: 15px;
+}
+
+.header .right a {
+    margin: 0 12px;
+}
+
+.button-purple {
+    display: block;
+}
+

@@ -28,7 +28,7 @@ function Home() {
   };
   return (
     <>
-      <h1 className={styles.title}>Make teamwork more productive</h1>
+      <h1 className='text-center'>Make teamwork more productive</h1>
       <main className={styles['cards-container']}>
         {plans.map((plan, index) => (
           <PlanCard

@@ -14,6 +14,9 @@ html {
     padding: 20px;
     border-radius: 4px;
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
 }
 
 .button-white {

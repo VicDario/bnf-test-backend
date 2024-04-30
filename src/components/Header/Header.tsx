@@ -18,8 +18,8 @@ function Header () {
             </div>
             <div className={styles.right}>
                 <a href="#" className='button text-black'>Sign in</a>
-                <a href="#" className='button button-white font-upper font-bold'>Talk To Sales</a>
-                <a href="#" className='button button-purple font-upper font-bold'>Try for free</a>
+                <a href="#" className='button button-white'>Talk To Sales</a>
+                <a href="#" className='button button-purple'>Try for free</a>
             </div>
         </header>
     )

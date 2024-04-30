@@ -6,12 +6,11 @@
 
 .header .left {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 .header .right {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .header .left .logo {
@@ -23,9 +22,12 @@
     align-items: center;
     justify-content: center;
     list-style: none;
+    gap: 20px;
 }
 .header .navbar ul li {
-    padding-right: 15px;
+    display: flex;
+    align-items: end;
+    font-weight: bold;
 }
 
 .header .right a {

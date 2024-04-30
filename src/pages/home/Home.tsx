@@ -29,8 +29,9 @@ function Home() {
     <>
       <h1>Make teamwork more productive</h1>
       <main className='cards-container'>
-        {plans.map((plan) => (
+        {plans.map((plan, index) => (
           <PlanCard
+            key={`${plan.name}.${index}`}
             name={plan.name}
             description={plan.description}
             price={plan.price}

@@ -30,8 +30,12 @@ html {
     color: white;
 }
 
-text-black {
-    color: #0000;
+.text-black {
+    color: #000;
+}
+
+.text-without-decoration {
+    text-decoration: none;
 }
 
 .font-upper {

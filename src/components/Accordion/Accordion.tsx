@@ -15,4 +15,6 @@ function Accordion({ summary, details }: AccordionProps) {
   );
 }
 
+// NOTE: The `dangerouslySetInnerHTML` prop is only for testing purposes.
+
 export default Accordion;

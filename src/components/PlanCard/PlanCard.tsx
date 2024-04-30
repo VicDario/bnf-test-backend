@@ -25,6 +25,11 @@ function PlanCard({
                 ${styles['card-container']}
                 ${bestValue ? styles['card__best-value'] : ''}`}
     >
+      {bestValue && (
+        <div className={styles['card__best-value__top']}>
+          <p>Best Value</p>
+        </div>
+      )}
       <div className={styles['card__top']}>
         <div>
           <h3 className={styles.card__title}>{name}</h3>
@@ -53,11 +58,6 @@ function PlanCard({
           Get Started
         </a>
       </div>
-      {bestValue && (
-        <div className={styles['card__best-value__top']}>
-          <p>Best Value</p>
-        </div>
-      )}
       <ul className={styles['card__features']}>
         {features.map((feature, index) => (
           <li

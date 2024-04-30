@@ -11,32 +11,47 @@ interface PlanCardProps {
 
 function PlanCard ({ name, description, price, features, aiAddon, bestValue }: PlanCardProps) {
     return (
-        <article className={styles['plan-card']}>
-            <h4>{ name }</h4>
-            <p>{ description }</p>
+        <article 
+            className={`
+                ${styles['card-container']}
+                ${bestValue ? styles['card__best-value'] : ''
+            }`
+        }>
+            <div className={styles['card__top']}>
+                <div>
+                    <h3 className={styles.card__title}>{ name }</h3>
+                    <p className={styles.card_description}>{ description }</p>
+                </div>
 
-            <div className={styles.price}>
-                <span>${ price }</span>
-                <span>USD/mo</span>
-            </div>
-            <div className={styles['plan-card__addon']}>
-                { aiAddon && <p>Salck AI add-on available</p> }
-            </div>
-            <a className={
-                `button
-                ${bestValue ? 'button-purple' : 'button-white'}
-                text-uppercase`
-                }
-            >Get Started</a>
-            <div>
-                <ul>
-                    { features.map((feature, index) => 
-                        <li key={`${name}-${index}`} className={`${feature.hidden ? 'feature-hidden': ''}`}>
-                            { feature.description }
-                        </li>)
+                    { price >= 0 && 
+                        <div className={styles['card__price']}>
+                            <span>${ price }</span>
+                            <span>USD/mo</span>
+                       </div> 
                     }
-                </ul>
+                <div className={`${styles['card__addon']} font-bold`}>
+                    { aiAddon && <p>Slack AI add-on available</p> }
+                </div>
+            <a className={`
+                button
+                ${bestValue ? 'button-purple' : 'button-white'}
+                `}
+            >
+                Get Started
+            </a>
             </div>
+            { bestValue &&
+                <div className={styles['card__best-value__top']}>
+                    <p>Best Value</p>
+                </div>
+            }
+            <ul className={styles['card__features']}>
+                { features.map((feature, index) => 
+                    <li key={`${name}-${index}`} className={`${feature.hidden ? styles['feature-hidden']: ''}`}>
+                        { feature.description }
+                    </li>)
+                }
+            </ul>
         </article>
     )
 }

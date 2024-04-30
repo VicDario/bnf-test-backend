@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PlanCard from "../components/PlanCard/PlanCard";
+import PlanCard from "../../components/PlanCard/PlanCard";
 
 interface Plan {
     ai_addon: boolean;

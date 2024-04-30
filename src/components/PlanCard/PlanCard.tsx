@@ -1,4 +1,4 @@
-import './PlanCard.css';
+import styles from './PlanCard.module.css';
 
 interface PlanCardProps {
     name: string;
@@ -11,18 +11,23 @@ interface PlanCardProps {
 
 function PlanCard ({ name, description, price, features, aiAddon, bestValue }: PlanCardProps) {
     return (
-        <section className='plan-card'>
+        <article className={styles['plan-card']}>
             <h4>{ name }</h4>
             <p>{ description }</p>
 
-            <div className='price'>
+            <div className={styles.price}>
                 <span>${ price }</span>
                 <span>USD/mo</span>
             </div>
-            <div className='plan-card__addon'>
+            <div className={styles['plan-card__addon']}>
                 { aiAddon && <p>Salck AI add-on available</p> }
             </div>
-            <a className={`button ${bestValue ? 'button-purple' : 'button-white'} text-uppercase`}>Get Started</a>
+            <a className={
+                `button
+                ${bestValue ? 'button-purple' : 'button-white'}
+                text-uppercase`
+                }
+            >Get Started</a>
             <div>
                 <ul>
                     { features.map((feature, index) => 
@@ -32,7 +37,7 @@ function PlanCard ({ name, description, price, features, aiAddon, bestValue }: P
                     }
                 </ul>
             </div>
-        </section>
+        </article>
     )
 }
 

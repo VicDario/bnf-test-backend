@@ -1,12 +1,12 @@
 import logo from '../../assets/slack_logo.png';
-import './Header.css';
+import styles from './Header.module.css';
 
 function Header () {
     return (
-        <header className='header'>
-            <div className='left'>
-                <img src={logo} alt="Slack" className='logo' />
-                <nav className='navbar'>
+        <header className={styles.header}>
+            <div className={styles.left}>
+                <img src={logo} alt="Slack" className={styles.logo} />
+                <nav className={styles.navbar}>
                     <ul>
                         <li>Features</li>
                         <li>Solutions</li>
@@ -16,7 +16,7 @@ function Header () {
                     </ul>    
                 </nav>
             </div>
-            <div className='right'>
+            <div className={styles.right}>
                 <a href="#" className='button text-black'>Sign in</a>
                 <a href="#" className='button button-white font-upper font-bold'>Talk To Sales</a>
                 <a href="#" className='button button-purple font-upper font-bold'>Try for free</a>

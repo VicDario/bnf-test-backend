@@ -1,0 +1,12 @@
+.title {
+    text-align: center;
+}
+.cards-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 30px;
+    gap: 4px;
+    background-color: transparent;
+    filter: drop-shadow(#00000069 0px 3px 8px);
+}

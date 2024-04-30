@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import styles from './Home.module.css';
 import PlanCard from '../../components/PlanCard/PlanCard';
 
 interface Plan {
@@ -27,8 +28,8 @@ function Home() {
   };
   return (
     <>
-      <h1>Make teamwork more productive</h1>
-      <main className='cards-container'>
+      <h1 className={styles.title}>Make teamwork more productive</h1>
+      <main className={styles['cards-container']}>
         {plans.map((plan, index) => (
           <PlanCard
             key={`${plan.name}.${index}`}

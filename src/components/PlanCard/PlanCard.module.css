@@ -55,11 +55,21 @@
 .card__features {
     padding: 0;
     margin: 0;
-    list-style: none;
     display: flex;
     flex-direction: column;
+    list-style: none;
     gap: 12px;
     font-size: 14px;
+}
+
+.card__features li {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+}
+
+.card__features p {
+    margin: 0;
 }
 
 .feature-hidden {

@@ -1,0 +1,24 @@
+.accordion-container {
+    overflow: hidden;
+    border-top: 1px solid #9c9c9ca1;
+}
+
+.accordion__summary {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.accordion__details {
+    padding: 20px;
+}
+
+.accordion-container[open] .accordion__summary .chevron {
+    transform: rotate(180deg);
+}
+
+.chevron {
+    transition: transform 0.3s;
+}

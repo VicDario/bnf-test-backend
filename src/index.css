@@ -30,6 +30,10 @@ html {
     color: white;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .text-black {
     color: #000;
 }
